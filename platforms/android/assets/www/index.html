@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+    Licenced under the GPL
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
+        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="css/skeleton.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="bower_components/leaflet/dist/leaflet.css" />
+        
+        <title>MS-Parken</title>
+    </head>
+    <body>
+        <div id="offline">
+            <script type="x-tmpl-mustache" id="tpl-keine_verbindung">
+            <p class="error disclaimer"> {{ keine_verbindung }} </p>
+            </script>
+        </div>
+        
+        <div id="main_window" class="main">
+            <h1>Parken in Münster</h1>
+            <div id="position_finden" class="subcontainer">
+                <script id='tpl-position_finden' type="x-tmpl-mustache">
+                    <p class="event get_location"><button> {{ position.find }} </button></p>
+                    <p class="event starten">{{ position.loading }}<span class='loading'>...</span></p>
+                    <p class="event fertig">{{ position.ready }}</p>
+                </script>
+            </div>
+            <div id="parken_finden" class="subcontainer">
+                <script id="tpl-parken_finden" type="x-tmpl-mustache">
+                    <p class="event get_freie_plaetze"><button>{{ parkhaus.holen }}</button></p>
+                    <p class="event starten">{{ parkhaus.laden }}<span class='loading'>...</span></p>
+                </script>
+                <script id="tpl-parkhaus" type="x-tmpl-mustache">
+                {{ #parkhaus }}
+                    <div class="event fertig">
+                        <p class="parkhaus name"> Name: {{ name }}</p>
+                        <p class="parkhaus plaetze">Freie Plätze: {{ freie_plaetze }}</p>
+                        <p class="parkhaus entfernung">Entfernung: {{ distance }}</p>
+                    </div>
+                {{ /parkhaus }}
+                </script>
+            </div>
+            <div id="route_anzeigen" class="subcontainer">
+                <div id="detail_route">
+                    <script id="tpl-route_anzeigen" type="x-tmpl-mustache">
+                    {{ #pois }}
+                        <div class="route poi">
+                            <p class="beschreibung"> {{ beschreibung }} </p>
+                            <p class="laenge"> {{ laenge }} km</p>
+                        </div>
+                    </script> 
+                </div>
+            </div>
+        </div>
+        
+        <div id="karte_anzeigen" class="karte">
+            <div class="hud collapsible">
+            <script id="hud_karte" type="x-tmpl-mustache">
+                <p class="karte coords">{{ lat }}/{{ lon }}</p>
+                <p class="karte position">{{ adresse }}</p>
+                
+                <p class="karte ziel">{{ ziel_lat }}/{{ ziel_lon }}</p>
+                <p class="karte ziel">{{ ziel_adresse }}</p>
+            </script>
+            </div>
+        </div>
+        
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/mustache/mustache.min.js"></script>
+        <!--<script type="text/javascript" src="bower_components/leaflet/dist/leaflet.js"></script>-->
+        <script type="text/javascript" src="js/pulltorefresh.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

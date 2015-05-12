@@ -1,0 +1,191 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   '-g',
+1 verbose cli   'install',
+1 verbose cli   'ripple-emulator' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.38
+4 verbose node symlink /usr/bin/node
+5 verbose cache add [ 'ripple-emulator', null ]
+6 verbose cache add name=undefined spec="ripple-emulator" args=["ripple-emulator",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'ripple-emulator',
+7 verbose parsed url   path: 'ripple-emulator',
+7 verbose parsed url   href: 'ripple-emulator' }
+8 silly lockFile eb53d4ae-ripple-emulator ripple-emulator
+9 verbose lock ripple-emulator /home/markus/.npm/eb53d4ae-ripple-emulator.lock
+10 silly lockFile eb53d4ae-ripple-emulator ripple-emulator
+11 silly lockFile eb53d4ae-ripple-emulator ripple-emulator
+12 verbose addNamed [ 'ripple-emulator', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile c6e72574-ripple-emulator ripple-emulator@
+15 verbose lock ripple-emulator@ /home/markus/.npm/c6e72574-ripple-emulator.lock
+16 silly addNameRange { name: 'ripple-emulator', range: '*', hasData: false }
+17 verbose request where is /ripple-emulator
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id f2589151605ad62b
+20 verbose url raw /ripple-emulator
+21 verbose url resolving [ 'https://registry.npmjs.org/', './ripple-emulator' ]
+22 verbose url resolved https://registry.npmjs.org/ripple-emulator
+23 verbose request where is https://registry.npmjs.org/ripple-emulator
+24 info trying registry request attempt 1 at 19:11:30
+25 http GET https://registry.npmjs.org/ripple-emulator
+26 http 200 https://registry.npmjs.org/ripple-emulator
+27 silly registry.get cb [ 200,
+27 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+27 silly registry.get     etag: '"BRO3BKGY4B1GTBA74DLY9QPQI"',
+27 silly registry.get     'content-type': 'application/json',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     'content-length': '23512',
+27 silly registry.get     'accept-ranges': 'bytes',
+27 silly registry.get     date: 'Mon, 11 May 2015 17:11:30 GMT',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     age: '0',
+27 silly registry.get     connection: 'keep-alive',
+27 silly registry.get     'x-served-by': 'cache-fra1234-FRA',
+27 silly registry.get     'x-cache': 'MISS',
+27 silly registry.get     'x-cache-hits': '0',
+27 silly registry.get     'x-timer': 'S1431364290.635630,VS0,VE352',
+27 silly registry.get     vary: 'Accept' } ]
+28 silly addNameRange number 2 { name: 'ripple-emulator', range: '*', hasData: true }
+29 silly addNameRange versions [ 'ripple-emulator',
+29 silly addNameRange   [ '0.9.15',
+29 silly addNameRange     '0.9.16',
+29 silly addNameRange     '0.9.17',
+29 silly addNameRange     '0.9.18',
+29 silly addNameRange     '0.9.19',
+29 silly addNameRange     '0.9.20',
+29 silly addNameRange     '0.9.21',
+29 silly addNameRange     '0.9.22',
+29 silly addNameRange     '0.9.23',
+29 silly addNameRange     '0.9.24',
+29 silly addNameRange     '0.9.28' ] ]
+30 verbose addNamed [ 'ripple-emulator', '0.9.28' ]
+31 verbose addNamed [ '0.9.28', '0.9.28' ]
+32 silly lockFile b9fa6964-ripple-emulator-0-9-28 ripple-emulator@0.9.28
+33 verbose lock ripple-emulator@0.9.28 /home/markus/.npm/b9fa6964-ripple-emulator-0-9-28.lock
+34 silly lockFile b02cec9d-lator-ripple-emulator-0-9-28-tgz https://registry.npmjs.org/ripple-emulator/-/ripple-emulator-0.9.28.tgz
+35 verbose lock https://registry.npmjs.org/ripple-emulator/-/ripple-emulator-0.9.28.tgz /home/markus/.npm/b02cec9d-lator-ripple-emulator-0-9-28-tgz.lock
+36 verbose addRemoteTarball [ 'https://registry.npmjs.org/ripple-emulator/-/ripple-emulator-0.9.28.tgz',
+36 verbose addRemoteTarball   'ba7a14b7ff0a851425f2488fab6eb618c0d7c861' ]
+37 info retry fetch attempt 1 at 19:11:31
+38 verbose fetch to= /tmp/npm-30643-9z78wVBs/registry.npmjs.org/ripple-emulator/-/ripple-emulator-0.9.28.tgz
+39 http GET https://registry.npmjs.org/ripple-emulator/-/ripple-emulator-0.9.28.tgz
+40 http 200 https://registry.npmjs.org/ripple-emulator/-/ripple-emulator-0.9.28.tgz
+41 silly lockFile b02cec9d-lator-ripple-emulator-0-9-28-tgz https://registry.npmjs.org/ripple-emulator/-/ripple-emulator-0.9.28.tgz
+42 silly lockFile b02cec9d-lator-ripple-emulator-0-9-28-tgz https://registry.npmjs.org/ripple-emulator/-/ripple-emulator-0.9.28.tgz
+43 silly lockFile b9fa6964-ripple-emulator-0-9-28 ripple-emulator@0.9.28
+44 silly lockFile b9fa6964-ripple-emulator-0-9-28 ripple-emulator@0.9.28
+45 silly lockFile c6e72574-ripple-emulator ripple-emulator@
+46 silly lockFile c6e72574-ripple-emulator ripple-emulator@
+47 silly resolved [ { name: 'ripple-emulator',
+47 silly resolved     version: '0.9.28',
+47 silly resolved     description: 'A browser based html5 mobile application development and testing tool',
+47 silly resolved     homepage: 'http://ripple.incubator.apache.org/',
+47 silly resolved     author:
+47 silly resolved      { name: 'Apache Ripple Community',
+47 silly resolved        url: 'http://ripple.incubator.apache.org/' },
+47 silly resolved     licenses: [ [Object] ],
+47 silly resolved     repository:
+47 silly resolved      { type: 'git',
+47 silly resolved        url: 'https://git-wip-us.apache.org/repos/asf/incubator-ripple.git' },
+47 silly resolved     keywords:
+47 silly resolved      [ 'cordova',
+47 silly resolved        'phonegap',
+47 silly resolved        'ripple',
+47 silly resolved        'mobile',
+47 silly resolved        'testing',
+47 silly resolved        'test',
+47 silly resolved        'emulator' ],
+47 silly resolved     bin: { ripple: './bin/ripple' },
+47 silly resolved     main: './lib/index',
+47 silly resolved     dependencies:
+47 silly resolved      { express: '3.1.0',
+47 silly resolved        'connect-xcors': '0.5.2',
+47 silly resolved        request: '2.12.0',
+47 silly resolved        colors: '0.6.0-1',
+47 silly resolved        moment: '1.x.x',
+47 silly resolved        accounting: '0.x.x',
+47 silly resolved        open: '0.0.3' },
+47 silly resolved     devDependencies:
+47 silly resolved      { connect: '2.3.6',
+47 silly resolved        jsdom: '0.6.x',
+47 silly resolved        cssmin: '0.3.1',
+47 silly resolved        'html-minifier': '0.4.5',
+47 silly resolved        jWorkflow: '0.x.x',
+47 silly resolved        xmlhttprequest: '1.4.2',
+47 silly resolved        coverjs: '0.0.14',
+47 silly resolved        bower: '0.9.x' },
+47 silly resolved     files:
+47 silly resolved      [ 'README.md',
+47 silly resolved        'DISCLAIMER',
+47 silly resolved        'LICENSE',
+47 silly resolved        'NOTICE',
+47 silly resolved        'lib/index.js',
+47 silly resolved        'lib/server',
+47 silly resolved        'lib/cli',
+47 silly resolved        'assets/server',
+47 silly resolved        'pkg/hosted',
+47 silly resolved        'doc',
+47 silly resolved        'bin' ],
+47 silly resolved     engines: { node: '>= 0.8.0', npm: '>= 1.1.0' },
+47 silly resolved     gitHead: '1d95fed5427fc9684318592be49741c0e7d777cb',
+47 silly resolved     _id: 'ripple-emulator@0.9.28',
+47 silly resolved     scripts: {},
+47 silly resolved     _shasum: 'ba7a14b7ff0a851425f2488fab6eb618c0d7c861',
+47 silly resolved     _from: 'ripple-emulator@',
+47 silly resolved     _npmVersion: '1.4.28',
+47 silly resolved     _npmUser: { name: 'brentlintner', email: 'brent.lintner@gmail.com' },
+47 silly resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object] ],
+47 silly resolved     dist:
+47 silly resolved      { shasum: 'ba7a14b7ff0a851425f2488fab6eb618c0d7c861',
+47 silly resolved        tarball: 'http://registry.npmjs.org/ripple-emulator/-/ripple-emulator-0.9.28.tgz' },
+47 silly resolved     directories: {},
+47 silly resolved     _resolved: 'https://registry.npmjs.org/ripple-emulator/-/ripple-emulator-0.9.28.tgz' } ]
+48 info install ripple-emulator@0.9.28 into /usr/lib
+49 info installOne ripple-emulator@0.9.28
+50 verbose lib/node_modules/ripple-emulator unbuild
+51 verbose tar unpack /home/markus/.npm/ripple-emulator/0.9.28/package.tgz
+52 silly lockFile 426fdece-lib-node-modules-ripple-emulator tar:///usr/lib/node_modules/ripple-emulator
+53 verbose lock tar:///usr/lib/node_modules/ripple-emulator /home/markus/.npm/426fdece-lib-node-modules-ripple-emulator.lock
+54 silly lockFile 72401358-pple-emulator-0-9-28-package-tgz tar:///home/markus/.npm/ripple-emulator/0.9.28/package.tgz
+55 verbose lock tar:///home/markus/.npm/ripple-emulator/0.9.28/package.tgz /home/markus/.npm/72401358-pple-emulator-0-9-28-package-tgz.lock
+56 silly gunzTarPerm modes [ '755', '644' ]
+57 error Error: EACCES, mkdir '/usr/lib/node_modules/ripple-emulator'
+57 error  { [Error: EACCES, mkdir '/usr/lib/node_modules/ripple-emulator']
+57 error   errno: 3,
+57 error   code: 'EACCES',
+57 error   path: '/usr/lib/node_modules/ripple-emulator',
+57 error   fstream_type: 'Directory',
+57 error   fstream_path: '/usr/lib/node_modules/ripple-emulator',
+57 error   fstream_class: 'DirWriter',
+57 error   fstream_stack:
+57 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+57 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+57 error      'Object.oncomplete (fs.js:108:15)' ] }
+58 error Please try running this command again as root/Administrator.
+59 error System Linux 3.13.0-37-generic
+60 error command "/usr/bin/node" "/usr/bin/npm" "-g" "install" "ripple-emulator"
+61 error cwd /home/markus/projekte/msparken
+62 error node -v v0.10.38
+63 error npm -v 1.4.28
+64 error path /usr/lib/node_modules/ripple-emulator
+65 error fstream_path /usr/lib/node_modules/ripple-emulator
+66 error fstream_type Directory
+67 error fstream_class DirWriter
+68 error code EACCES
+69 error errno 3
+70 error stack Error: EACCES, mkdir '/usr/lib/node_modules/ripple-emulator'
+71 error fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+71 error fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+71 error fstream_stack Object.oncomplete (fs.js:108:15)
+72 verbose exit [ 3, true ]
