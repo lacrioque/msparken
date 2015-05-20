@@ -21,7 +21,7 @@ var cordova = function(){
         },
          watchPositionOptions = { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true },
          networkState = navigator.connection.type,
-         saveHeading = function(heading){ location.heading = heading }, 
+         saveHeading = function(heading){ location.heading = heading; }, 
          savePosition = function(position){ location.position = position; },
          watchLocation =  function(){
                 navigator.compass.watchHeading(saveHeading, function(err){console.log(err);} );
@@ -55,7 +55,7 @@ var cordova = function(){
             },
 
             vibrate: function(time){
-                if(time == undefined ) { time=[2000]; }
+                if(time === undefined ) { time=[2000]; }
                 navigator.vibrate(time);
             },
 
@@ -84,13 +84,14 @@ router = function(base, default_site, routes){
         url_parts = href.split('#!');
         site = url_parts[1],
         url = url_parts[0],
-        current, default_site;
-        current = site == undefined ? default_site : site;
+        current, 
+        default_site;
+        current = site === undefined ? default_site : site;
         url = base,
         pushState = function(stateObj, name, page){
-            stateObj = stateObj == undefined ? {} : stateObj;
-             name = name == undefined ? "" : name;
-             page = page == undefined ? current : page;
+            stateObj = stateObj === undefined ? {} : stateObj;
+             name = name === undefined ? "" : name;
+             page = page === undefined ? current : page;
              history.pushState(stateObj, name, page);
         };
         history.replaceState({online: true},'main',location.href+"#!"+'main');
@@ -125,7 +126,7 @@ router = function(base, default_site, routes){
             self.router.pushState({online: true, position_finden: true}, 'Position Finden', url_base+"position_finden");
          }
          self.bindEvents();
-         self.activate(router.getCurrent())
+         self.activate(router.getCurrent());
      },
      
      bindEvents : function(){
@@ -149,7 +150,7 @@ document.addEventListener("deviceready", msparken.initialize, false);
 
 $.fn.extend({
     display : function(display){
-        if(display == undefined) {display = 'block';}
+        if(display === undefined) {display = 'block';}
         $(this).css({display: display});
     }
 });

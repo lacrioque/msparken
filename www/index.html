@@ -32,39 +32,38 @@
         
         <div id="main_window" class="main">
             <h1>Parken in Münster</h1>
-            <div id="position_finden" class="subcontainer">
-                <script id='tpl-position_finden' type="x-tmpl-mustache">
-                    <p class="event get_location"><button> {{ position.find }} </button></p>
-                    <p class="event starten">{{ position.loading }}<span class='loading'>...</span></p>
-                    <p class="event fertig">{{ position.ready }}</p>
-                </script>
-            </div>
-            <div id="parken_finden" class="subcontainer">
-                <script id="tpl-parken_finden" type="x-tmpl-mustache">
+            <div id="position_finden" class="subcontainer"></div>
+            <script id='tpl-position_finden' type="x-tmpl-mustache">
+                <p class="event get_location"><button> {{ position.find }} </button></p>
+                <p class="event starten">{{ position.loading }}<span class='loading'>...</span></p>
+                <p class="event fertig">{{ position.ready }}</p>
+                <p class="event fertig location">{{ position.lat }}/{{ position.lng }}</p>
+            </script>
+            
+            <div id="parken_finden" class="subcontainer"></div>
+             <script id="tpl-parken_finden" type="x-tmpl-mustache">
                     <p class="event get_freie_plaetze"><button>{{ parkhaus.holen }}</button></p>
                     <p class="event starten">{{ parkhaus.laden }}<span class='loading'>...</span></p>
                 </script>
+            <div id="parkhaus" class="subcontainer"></div>
                 <script id="tpl-parkhaus" type="x-tmpl-mustache">
                 {{ #parkhaus }}
-                    <div class="event fertig">
+                    <div class="event fertig parkhaus_navigation">
                         <p class="parkhaus name"> Name: {{ name }}</p>
                         <p class="parkhaus plaetze">Freie Plätze: {{ freie_plaetze }}</p>
                         <p class="parkhaus entfernung">Entfernung: {{ distance }}</p>
                     </div>
                 {{ /parkhaus }}
                 </script>
-            </div>
-            <div id="route_anzeigen" class="subcontainer">
-                <div id="detail_route">
-                    <script id="tpl-route_anzeigen" type="x-tmpl-mustache">
+            
+            <div id="route_anzeigen" class="subcontainer"></div>
+            <script id="tpl-route_anzeigen" type="x-tmpl-mustache">
                     {{ #pois }}
                         <div class="route poi">
                             <p class="beschreibung"> {{ beschreibung }} </p>
                             <p class="laenge"> {{ laenge }} km</p>
                         </div>
                     </script> 
-                </div>
-            </div>
         </div>
         
         <div id="karte_anzeigen" class="karte">
@@ -85,6 +84,10 @@
         <script type="text/javascript" src="bower_components/mustache/mustache.min.js"></script>
         <!--<script type="text/javascript" src="bower_components/leaflet/dist/leaflet.js"></script>-->
         <script type="text/javascript" src="js/pulltorefresh.js"></script>
+        <script type="text/javascript" src="js/template_worker.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCFgENLToOoUluM5_azVSjFxzHsrTB2htI&sensor=true">
+    </script>
     </body>
 </html>

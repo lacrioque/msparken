@@ -23,7 +23,7 @@ var pull = function() {
       refreshing = $('#refreshing');
       success = function(work){
             work();
-            setTimeout(function(){location.reload(), 2000});
+            setTimeout(function(){location.reload();}, 2000);
           };
       cancel = function(){};
 
